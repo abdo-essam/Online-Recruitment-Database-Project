@@ -9,7 +9,7 @@ employers. Applicants have a simpler, more efficient application process, while 
 are able to manage all applications in an efficient manner.
 An online recruitment system can include the following functionalities:
 
--- Signing up a new user (e.g. job seeker, employer)
+- Signing up a new user (e.g. job seeker, employer)
 -- Updating user details
 -- Adding/updating a vacancy (by employer)
 -- Showing a list of vacancies that satisfy certain criteria (e.g. industry, location, required experience…)

@@ -25,3 +25,16 @@ An online recruitment system can include the following functionalities:
 - Who were the employers didn’t announce any job last month?
 - What were the available positions at each employer last month?
 - For each seeker, retrieve all his/her information and the number of jobs he applied for
+
+
+## General Requirements
+
+- Draw the corresponding ERD for this project in a way that answers the corresponding inquires stated in the project.
+- Convert the ERD to Physical model (DDL scripts)
+- Write SQL statements corresponding to the queries
+
+## Deliverables
+- Conceptual Model (ERD) 
+- Physical model 
+- Set of SQL statements + Snapshot of the results 
+- Project report containing all deliverables

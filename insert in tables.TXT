@@ -1,0 +1,265 @@
+(admin table)
+INSERT INTO admin(username,password) VALUES ('admin','admin');
+
+(states table)
+INSERT INTO dbo.states(name) VALUES ('Alabama');
+INSERT INTO dbo.states(name) VALUES ('Indiana');
+INSERT INTO dbo.states(name) VALUES ('Nebraska');
+INSERT INTO dbo.states(name) VALUES ('Nevada');
+INSERT INTO dbo.states(name) VALUES ('Iowa');
+INSERT INTO dbo.states(name) VALUES ('Alaska');
+INSERT INTO dbo.states(name) VALUES ('Arizona');
+INSERT INTO dbo.states(name) VALUES ('Kansas');
+
+(Cities table)
+INSERT INTO dbo.Cities(name,state_id) VALUES ('Birmingham',1);
+INSERT INTO dbo.Cities(name,state_id) VALUES ('Montgomery',1);
+INSERT INTO dbo.Cities(name,state_id) VALUES ('Mobile',1);
+INSERT INTO dbo.Cities(name,state_id) VALUES ('Huntsville',1);
+INSERT INTO dbo.Cities(name,state_id) VALUES ('Tuscaloosa',1);
+INSERT INTO dbo.Cities(name,state_id) VALUES ('Indianapolis',2);
+INSERT INTO dbo.Cities(name,state_id) VALUES ('Fort Wayne',2);
+INSERT INTO dbo.Cities(name,state_id) VALUES ('Evansville',2);
+INSERT INTO dbo.Cities(name,state_id) VALUES ('South Bend',2);
+INSERT INTO dbo.Cities(name,state_id) VALUES ('Hammond',2);
+INSERT INTO dbo.Cities(name,state_id) VALUES ('Omaha',3);
+INSERT INTO dbo.Cities(name,state_id) VALUES ('Lincoln',3);
+INSERT INTO dbo.Cities(name,state_id) VALUES ('Bellevue',3);
+INSERT INTO dbo.Cities(name,state_id) VALUES ('Grand Island',3);
+INSERT INTO dbo.Cities(name,state_id) VALUES ('Kearney',3);
+
+(Job_title table)
+INSERT INTO dbo.Job_title(job_title) VALUES ('Medical Assistant');
+INSERT INTO dbo.Job_title(job_title) VALUES ('Web Designer');
+INSERT INTO dbo.Job_title(job_title) VALUES ('Dog Trainer');
+INSERT INTO dbo.Job_title(job_title) VALUES ('President of Sales');
+INSERT INTO dbo.Job_title(job_title) VALUES ('Nursing Assistant');
+INSERT INTO dbo.Job_title(job_title) VALUES ('Project Manager');
+INSERT INTO dbo.Job_title(job_title) VALUES ('Librarian');
+INSERT INTO dbo.Job_title(job_title) VALUES ('Project Manager');
+INSERT INTO dbo.Job_title(job_title) VALUES ('Account Executive');
+INSERT INTO dbo.Job_title(job_title) VALUES ('Well Driller');
+
+(job_type table)
+INSERT INTO dbo.Job_type(job_type) VALUES ('Full Time');
+INSERT INTO dbo.Job_type(job_type) VALUES ('Work From Home');
+INSERT INTO dbo.Job_type(job_type) VALUES ('Part Time');
+INSERT INTO dbo.Job_type(job_type) VALUES ('Freelance/Project');
+INSERT INTO dbo.Job_type(job_type) VALUES ('Shift Based');
+INSERT INTO dbo.Job_type(job_type) VALUES ('Internship');
+INSERT INTO dbo.Job_type(job_type) VALUES ('Volunteering');
+INSERT INTO dbo.Job_type(job_type) VALUES ('Student Activity');
+
+(job_category table)
+INSERT INTO dbo.Job_category(job_category) VALUES ('Marketing/PR/Advertising');
+INSERT INTO dbo.Job_category(job_category) VALUES ('Analyst/Research');
+INSERT INTO dbo.Job_category(job_category) VALUES ('Fashion');
+INSERT INTO dbo.Job_category(job_category) VALUES ('Strategy/Consulting');
+INSERT INTO dbo.Job_category(job_category) VALUES ('Banking');
+INSERT INTO dbo.Job_category(job_category) VALUES ('Creative/Design/Art');
+INSERT INTO dbo.Job_category(job_category) VALUES ('Human Resources');
+INSERT INTO dbo.Job_category(job_category) VALUES ('Logistics/Supply Chain');
+INSERT INTO dbo.Job_category(job_category) VALUES ('Medical/Healthcase');
+INSERT INTO dbo.Job_category(job_category) VALUES ('Sales/Retail');
+INSERT INTO dbo.Job_category(job_category) VALUES ('Pharmaceutical');
+INSERT INTO dbo.Job_category(job_category) VALUES ('C-Level Executive/GM/Director');
+INSERT INTO dbo.Job_category(job_category) VALUES ('R&D/Science');
+INSERT INTO dbo.Job_category(job_category) VALUES ('Customer Service/Support');
+INSERT INTO dbo.Job_category(job_category) VALUES ('Installation/Maintenance/Repair');
+INSERT INTO dbo.Job_category(job_category) VALUES ('Opeation/Management');
+INSERT INTO dbo.Job_category(job_category) VALUES ('Porject/Program Management');
+INSERT INTO dbo.Job_category(job_category) VALUES ('Media/Journalism/Publishing');
+INSERT INTO dbo.Job_category(job_category) VALUES ('Tourism/Travel');
+INSERT INTO dbo.Job_category(job_category) VALUES ('Engineering-Telecon/Technology');
+INSERT INTO dbo.Job_category(job_category) VALUES ('IT/Software Development');
+
+(Industry table)
+INSERT INTO dbo.Industry(name) VALUES ('Manufacturing');
+INSERT INTO dbo.Industry(name) VALUES ('Engineering Services');
+INSERT INTO dbo.Industry(name) VALUES ('Information Technology Services');
+INSERT INTO dbo.Industry(name) VALUES ('Computer Software');
+INSERT INTO dbo.Industry(name) VALUES ('Real Estate/Property Management');
+INSERT INTO dbo.Industry(name) VALUES ('Marketing and Advertising');
+INSERT INTO dbo.Industry(name) VALUES ('Internet/E-commerce');
+INSERT INTO dbo.Industry(name) VALUES ('FMCG');
+
+(Career table)
+INSERT INTO dbo.Career(name) VALUES ('Student');
+INSERT INTO dbo.Career(name) VALUES ('Entry Level');
+INSERT INTO dbo.Career(name) VALUES ('Experienced');
+INSERT INTO dbo.Career(name) VALUES ('Manager');
+INSERT INTO dbo.Career(name) VALUES ('Senior Management');
+
+(JobSeeker table)
+INSERT INTO dbo.JobSeeker(firstname,lastname,email,[password],about_me,city_id,
+state_id,contact_no,career_id,date_of_birth,gender,industry_id)
+VALUES ('abdo' , 'kamal' , 'abdokamal@gmail.com','1452375454','An “About Me,” also known as a blurb,
+is a short piece of writing that informs your reader about your professional background,
+key accomplishments, personal values and any brands you may be associated with. Personal websites,
+social media profiles and company directories often feature “About Me” sections.
+A blurb is an opportunity to quickly give important details about yourself to potential business contacts like clients, vendors,
+employers or anyone who wants to get to know you better.' ,3,3 ,'01154267454',3,'2001-4-14','M',8);
+
+INSERT INTO dbo.JobSeeker(firstname,lastname,email,[password],about_me,city_id,
+state_id,contact_no,career_id,date_of_birth,gender,industry_id)
+VALUES ('yara' , 'yaser' , 'yarayaser@gmail.com','123456789','An “About Me,” also known as a blurb,
+is a short piece of writing that informs your reader about your professional background,
+key accomplishments, personal values and any brands you may be associated with. Personal websites,
+social media profiles and company directories often feature “About Me” sections.
+A blurb is an opportunity to quickly give important details about yourself to potential business contacts like clients, vendors,
+employers or anyone who wants to get to know you better.' ,2,2 ,'01101524554',2,'2000-8-14','F',1);
+
+INSERT INTO dbo.JobSeeker(firstname,lastname,email,[password],about_me,city_id,
+state_id,contact_no,career_id,date_of_birth,gender,industry_id)
+VALUES ('abdo' , 'essam' , 'abdoessam743@gmail.com','0000000000','An “About Me,” also known as a blurb,
+is a short piece of writing that informs your reader about your professional background,
+key accomplishments, personal values and any brands you may be associated with. Personal websites,
+social media profiles and company directories often feature “About Me” sections.
+A blurb is an opportunity to quickly give important details about yourself to potential business contacts like clients, vendors,
+employers or anyone who wants to get to know you better.' ,1,1 ,'01220877201',1,'2000-9-17','M',4);
+
+
+INSERT INTO dbo.JobSeeker(firstname,lastname,email,[password],city_id,
+state_id,contact_no,career_id,date_of_birth,gender,industry_id)
+VALUES ('ahmed' , 'mostafa' , 'ahmed@gmail.com','123556689', 3,2 ,'01255554554',2,'2002-3-1','M',3);
+
+INSERT INTO dbo.JobSeeker(firstname,lastname,email,[password],
+state_id,contact_no,career_id,date_of_birth,gender,industry_id)
+VALUES ('sara' , 'ahmed' , 's_ahmed@gmail.com','1561641531',2 ,'01099523125',2,'1995-2-14','F',1);
+
+(Employer table)
+INSERT INTO dbo.Employer(company_name,establishment_date,city_id,state_id,
+contact_no,website_url,email,password,about_me) VALUES ('Facebook' ,'2009-5-12',6,2,'01251556569'
+,'www.facebook.com','facebook@gmail.com' ,'ssdfadgafd484','The Facebook company builds 
+technologies that give people the power to connect with friends and family,
+find communities and grow businesses.
+');
+
+INSERT INTO dbo.Employer(company_name,establishment_date,city_id,state_id,
+contact_no,website_url,email,password,about_me) VALUES ('Google' ,'2002-1-15',12,3,'01251614569'
+,'www.google.com','google@gmail.com' ,'dfknav415SD','Google was founded in September 1998 by Larry Page and Sergey Brin while they were Ph.D. students at Stanford University in California. 
+Together they own about 14 percent of its shares and control 56 percent of the stockholder voting power through supervoting stock. 
+They incorporated Google as a California privately held company on September 4, 1998, in California.
+Google was then reincorporated in Delaware on October 22, 2002.
+[13] An initial public offering (IPO) took place on August 19, 
+2004, and Google moved to its headquarters in Mountain View, California, nicknamed the Googleplex.
+In August 2015, Google announced plans to reorganize its various interests as a conglomerate called Alphabet Inc.
+Google is Alphabet"s leading subsidiary and will continue to be the umbrella company for Alphabet"s Internet interests. 
+Sundar Pichai was appointed CEO of Google, replacing Larry Page who became the CEO of Alphabet.
+');
+
+INSERT INTO dbo.Employer(company_name,establishment_date,city_id,state_id,
+contact_no,website_url,email,password) VALUES ('AE' ,'2025-9-17',1,2,'0115251169'
+,'www.AE.com','AE@gmail.com' ,'ss5564484');
+
+INSERT INTO dbo.Employer(company_name,establishment_date,city_id,state_id,
+contact_no,website_url,email,password,about_me) VALUES ('Amazn' ,'2020-4-10',1,2,'01003777869'
+,'www.amazon.com','Amazon@gmail.com' ,'ss5564484','Amazon is guided by four principles: customer obsession rather than competitor focus,
+passion for invention, commitment to operational excellence,
+and long-term thinking.');
+
+INSERT INTO dbo.Employer(company_name,establishment_date,city_id,state_id,
+contact_no,website_url,email,password) VALUES ('Souq' ,'2012-1-11',6,2,'01188974569'
+,'www.souq.com','souq@gmail.com' ,'122333484');
+
+
+(Edication table)
+INSERT INTO dbo.Education(jobseeker_id,certificate_degree_name,major,institute_university_name,
+starting_date,completion_date,[percentage],cgpa) 
+VALUES (1,'FCI','it','Cairo','2018-9-20' , '2022-6-28' ,98.5 ,3.9);
+
+INSERT INTO dbo.Education(jobseeker_id,certificate_degree_name,major,institute_university_name,
+starting_date,completion_date,[percentage]) 
+VALUES (1,'High School','Scientific mathematics','6 october school','2017-9-20' , '2018-7-15' ,93.5);
+
+(JobPost table)
+INSERT INTO dbo.Job_post(id_employer,jobtitle_id,min_salary,max_salary,city_id,state_id,
+created_at,experience_years,[description],job_category,jobtype_id,industry_id) values (1,3,3300,8500,10,2,'2020-4-1',4,
+'Web development is nothing more than an attempt to turn a computer into a user interface that anyone can use. 
+User Interface Design has been around since the inception of computers,
+and has been a popular term for computer users to describe the design of new software and hardware.
+Today there are two basic types of user interface: "linear"hyper-/virtual."
+The majority of Web developers make their living creating virtual user interfaces for such things as new businesses,
+electronic mail, electronic shopping carts, and online games.',30,1,4)
+
+INSERT INTO dbo.Job_post(id_employer,jobtitle_id,min_salary,max_salary,city_id,state_id,
+created_at,experience_years,[description],job_category,jobtype_id,industry_id) values (1,11,1500,5000,1,1,'2020-4-15',1,
+'A marketing coordinator assists the marketing department of a company in coordinating all of its marketing efforts.
+The marketing coordinator may assist the director or vice president of marketing,
+completing tasks that help the department reach its marketing goals.
+A marketing coordinator may have the following responsibilities.',21,2,5)
+
+INSERT INTO dbo.Job_post(id_employer,jobtitle_id,min_salary,max_salary,city_id,state_id,
+created_at,[description],job_category,jobtype_id,industry_id) values (2,12,1500,5000,13,3,'2020-1-5',
+'A virtual assistant (VA) is a person who provides support services to other businesses from a remote location.
+The term originated in the 1990s as the ability to work virtually,
+due to technology improvements like high-speed internet and document sharing, 
+made working remotely a reality.' , 24,6,3)
+
+INSERT INTO dbo.Job_post(id_employer,jobtitle_id,min_salary,max_salary,city_id,state_id,
+created_at,job_category,jobtype_id,industry_id) values (1,8,100,2000,13,3,'2020-4-30',19,7,8)
+
+INSERT INTO dbo.Job_post(id_employer,jobtitle_id,min_salary,max_salary,city_id,state_id,
+created_at,job_category,jobtype_id,industry_id ,is_active) values (1,7,1000,8000,10,3,'2020-4-20',10,2,8,0)
+
+INSERT INTO dbo.Job_post(id_employer,jobtitle_id,min_salary,max_salary,city_id,state_id,
+created_at,job_category,jobtype_id,industry_id,is_active) values (2,3,1000,25000,13,3,'2020-4-4',16,4,5 ,0)
+
+INSERT INTO dbo.Job_post(id_employer,jobtitle_id,min_salary,max_salary,city_id,state_id,
+created_at,[description],job_category,jobtype_id,industry_id) values (3,12,1100,8000,13,3,'2020-4-5',
+'A virtual assistant (VA) is a person who provides support services to other businesses from a remote location.
+The term originated in the 1990s as the ability to work virtually,
+due to technology improvements like high-speed internet and document sharing, 
+made working remotely a reality.' , 24,6,3)
+
+INSERT INTO dbo.Job_post(id_employer,jobtitle_id,min_salary,max_salary,city_id,state_id,
+created_at,job_category,jobtype_id,industry_id) values (1,8,100,800,10,3,'2019-4-5',
+  24,6,3)
+
+INSERT INTO dbo.Job_post(id_employer,jobtitle_id,min_salary,max_salary,city_id,state_id,
+created_at,experience_years,[description],job_category,jobtype_id,industry_id) values (1,13,1500,5000,1,1,'2020-4-20',1,
+'A marketing coordinator assists the marketing department of a company in coordinating all of its marketing efforts.
+The marketing coordinator may assist the director or vice president of marketing,
+completing.',21,2,5)
+
+INSERT INTO dbo.Job_post(id_employer,jobtitle_id,min_salary,max_salary,city_id,state_id,
+created_at,experience_years,[description],job_category,jobtype_id,industry_id) values (2,3,3300,8500,10,2,'2015-4-1',4,
+'Web development is nothing more than an attemace that anyone can use. 
+User Interface Design has been around since the inception of computers,
+arts, and online games.',30,1,4)
+
+INSERT INTO dbo.Job_post(id_employer,jobtitle_id,min_salary,max_salary,city_id,state_id,
+created_at,experience_years,[description],job_category,jobtype_id,industry_id) values (2,3,100,8500,10,2,'2017-4-1',4,
+'Web development is nothing more than an attem use. 
+User has been around since the inception of computers,
+arts, and online games.',30,1,4)
+
+(Application table)
+insert into dbo.Application(apply_date,id_jobpost,jobseeker_id) values ('2020-4-19',1,3)
+insert into dbo.Application(apply_date,id_jobpost,jobseeker_id) values ('2020-4-30',2,1)
+insert into dbo.Application(apply_date,id_jobpost,jobseeker_id) values ('2020-5-19',3,2)
+insert into dbo.Application(apply_date,id_jobpost,jobseeker_id) values ('2020-3-19',1,1)
+insert into dbo.Application(apply_date,id_jobpost,jobseeker_id) values ('2020-4-9',1,2)
+insert into dbo.Application(apply_date,id_jobpost,jobseeker_id) values ('2020-5-22',3,1)
+insert into dbo.Application(apply_date,id_jobpost,jobseeker_id) values ('2019-4-22',8,2)
+
+
+(Experince table)
+insert into dbo.Experience(is_current_job,start_date,end_date,jobtitle_id,city_id,state_id,jobseeker_id,company_name,description) values (0,'2009-09-01','2018-01-28',3,1,1,2,'Facebook','This Web Developer job description sample template is optimized for advertising for a website developer on online job boards or careers pages. It is easy to customize with key duties and responsibilities. Feel free to modify this posting to a web designer job description, or for your specific needs')
+
+insert into dbo.Experience(is_current_job,start_date,jobtitle_id,city_id,state_id,jobseeker_id,company_name) values (1,'2018-01-11',5,4,3,3,'Google')
+
+(Saved jobs)
+insert into dbo.Saved_jobs(jobseeker_id,id_jobpost) values (1,2)
+insert into dbo.Saved_jobs(jobseeker_id,id_jobpost) values (1,3)
+insert into dbo.Saved_jobs(jobseeker_id,id_jobpost) values (1,9)
+insert into dbo.Saved_jobs(jobseeker_id,id_jobpost) values (3,5)
+
+
+
+
+
+
+
+
+

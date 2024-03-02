@@ -1,0 +1,126 @@
+------------Country------------
+Egypt
+
+
+------------City---------------
+Cairo
+Giza
+Alexandria
+Sharqia
+Monufya
+Beheira
+Suez
+Dakahlia
+Gharbia
+Port Said
+Assiut
+Suez
+Qalubia
+Ismailia
+Dubai
+Jeddah
+Riyadh
+
+
+
+
+------------Area---------------
+New Cairo
+Nasr City
+Maadi
+6th of October
+Heliopolis
+10th of Ramadan City
+Obour City
+Mohandessin 
+Sheraton
+Sheikh Zayed 
+
+------------Career Level-------
+Student
+Entry Level
+Experienced
+Manager
+Senior Management
+
+------------Job Role-----------
+Sales/Retail
+IT/Software Development
+Engineering Technology
+Engineering Mechanical/Electrical
+Engineering Construction/Civil/Architecture
+Marketing/PR/Advertising
+Accounting/Finance
+Customer Service/Support
+Operation/Management
+Media/Journalism/Publishing
+
+------------Job Type-----------
+Full Time
+Work From Home
+Part Time
+Freelance/Project
+Shift Based
+Internship
+Volunteering
+Student Activity
+------------Industry-----------
+Construction - Industrial Facilities and Infrastructure
+Manufacturing
+Engineering Services
+Information Technology Services
+Construction - Residential & Commercial/Office
+Computer Software
+FMCG
+Real Estate/Property Management
+Marketing and Advertising
+Internet/E-commerce
+
+
+------------Jobs Caregories-----
+Accounting/Finance
+Engineering - Construction/Civil/Architecture
+Writing/Editorial
+IT/Software Development
+Manufacturing/Production
+Quality
+Sports and Leisure
+Purchasing/Procurement
+Administration
+Business Development
+Hospitality/Hotels/Food Services
+Legal
+Marketing/PR/Advertising
+Analyst/Research
+Fashion
+Strategy/Consulting
+Banking
+Creative/Design/Art
+Human Resources
+Logistics/Supply Chain
+Medical/Healthcase
+Sales/Retail
+Pharmaceutical
+C-Level Executive/GM/Director
+R&D/Science
+Customer Service/Support
+Installation/Maintenance/Repair
+Opeation/Management
+Porject/Program Management
+Media/Journalism/Publishing
+Tourism/Travel
+Engineering - Telecon/Technology
+
+-----------Job titles----------
+Marketing Coordinator
+Medical Assistant
+Web Designer
+Dog Trainer
+President of Sales
+Nursing Assistant
+Project Manager
+Librarian
+Project Manager
+Account Executive
+Virtual Assistant
+

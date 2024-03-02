@@ -1,0 +1,111 @@
+CREATE TABLE [admin] (
+  [username] varchar(20),
+  [password] varchar(50),
+  PRIMARY KEY ([username])
+);
+CREATE TABLE [Industry] (
+  [id] int IDENTITY(1,1) PRIMARY KEY ,
+  [name] varchar(20) NOT NULL,
+);
+CREATE TABLE [City] (
+  cities_id int IDENTITY(1,1) PRIMARY KEY,
+  [name] varchar(15) NOT NULL ,
+  state_id int FOREIGN KEY REFERENCES [OnlineRecruitment1].[dbo].[states](ID) 
+);
+CREATE TABLE [states] (
+  ID int IDENTITY(1,1) PRIMARY KEY,
+  [name] varchar(20) NOT NULL ,
+);
+CREATE TABLE [Job_title] (
+  ID int IDENTITY(1,1) PRIMARY KEY,
+  [job_title] varchar(30) not null
+);
+CREATE TABLE [Career] (
+  ID int IDENTITY(1,1) PRIMARY KEY,
+  [name] varchar(20) not null
+);
+CREATE TABLE [Job_type] (
+  ID int IDENTITY(1,1) PRIMARY KEY,
+  [job_type] varchar(20) not null 
+);
+CREATE TABLE [Job_category] (
+  ID int IDENTITY(1,1) PRIMARY KEY,
+  [job_category] varchar(40) not null
+);
+CREATE TABLE [JobSeeker] (
+  ID int IDENTITY(1,1) PRIMARY KEY,
+  [firstname] varchar(20) not null,
+  [lastname] varchar(20) not null,
+  [email] varchar(50) not null,
+  [password] varchar(50) not null,
+  [about_me] varchar(500),
+  city_id int FOREIGN KEY REFERENCES Cities(cities_id),
+  state_id int FOREIGN KEY REFERENCES states(ID),
+  [contact_no] varchar(15),
+  [career_id] int FOREIGN KEY REFERENCES Career(ID),
+  [is_active] bit DEFAULT 1,
+  [date_of_birth] date,
+  [gender] char(1),
+  industry_id int FOREIGN KEY REFERENCES Industry(ID)
+);
+CREATE TABLE [Experience] (
+  [is_current_job] bit Default 0,
+  [start_date] date,
+  [end_date] date,
+  [jobtitle_id] int FOREIGN KEY REFERENCES Job_title(ID),
+  city_id int FOREIGN KEY REFERENCES Cities(cities_id),
+  state_id int FOREIGN KEY REFERENCES states(ID),
+  jobseeker_id int FOREIGN KEY REFERENCES JobSeeker(ID) NOT NULL PRIMARY KEY, 
+  [company_name] varchar(50),
+  [description] varchar(1000)
+);
+CREATE TABLE [Education] (
+  jobseeker_id int FOREIGN KEY REFERENCES JobSeeker(ID) Not Null,
+  [certificate_degree_name] varchar(50),
+  [major] varchar(50),
+  [institute_university_name] varchar(50),
+  [starting_date] date,
+  [completion_date] date,
+  [percentage] decimal(4,2),
+  [cgpa] decimal(4,2)
+);
+CREATE TABLE [Employer] (
+  ID int IDENTITY(1,1) PRIMARY KEY,
+  [company_name] varchar(30),
+  [is_active] bit Default 1,
+  [establishment_date] date,
+  city_id int FOREIGN KEY REFERENCES Cities(cities_id),
+  state_id int FOREIGN KEY REFERENCES states(ID),
+  [contact_no] char(11),
+  [website_url] varchar(50),
+  [email] varchar(50) not null,
+  [password] varchar(50) not null,
+  [about_me] varchar(1000)
+);
+CREATE TABLE [Job_post] (
+  ID int IDENTITY(1,1) PRIMARY KEY,
+  [id_employer] int FOREIGN KEY REFERENCES Employer(ID),
+  [jobtitle_id] int FOREIGN KEY REFERENCES Job_title(ID),
+  [min_salary] decimal(10,2),
+  [max_salary] decimal(10,2),
+  city_id int FOREIGN KEY REFERENCES Cities(cities_id),
+  state_id int FOREIGN KEY REFERENCES states(ID),
+  [created_at] smalldatetime DEFAULT GETDATE(),
+  [experience_years] int default 0,
+  [description] varchar(1000),
+  [is_active] bit default 1,
+  [job_category] int FOREIGN KEY REFERENCES Job_category(ID),
+  [company_name_hidden] bit Default 0,
+  [jobtype_id] int FOREIGN KEY REFERENCES Job_type(ID),
+  industry_id int FOREIGN KEY REFERENCES Industry(ID)
+);
+CREATE TABLE [Application] (
+  [apply_date] smalldatetime DEFAULT GETDATE(),
+  [id_jobpost] int FOREIGN KEY REFERENCES Job_post(ID)  not null,
+  jobseeker_id int FOREIGN KEY REFERENCES JobSeeker(ID) not null
+);
+CREATE TABLE [Saved_jobs] (
+  jobseeker_id int FOREIGN KEY REFERENCES JobSeeker(ID) not null,
+  [id_jobpost] int FOREIGN KEY REFERENCES Job_post(ID) not null
+);
+

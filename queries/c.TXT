@@ -1,0 +1,24 @@
+select TOP(1) Employer.ID,Employer.company_name,
+Employer.contact_no,Employer.email,
+Employer.[password],Employer.establishment_date,
+Employer.website_url,City.[name] AS City, states.[name] AS State,
+m.posts as [Number of announcements]
+From
+(
+SELECT Employer.ID as Employer_id, 
+COUNT(*) as [posts]
+FROM Employer join Job_post
+on Job_post.id_employer = Employer.ID 
+
+AND created_at BETWEEN 
+ DATEADD(day,1-DAY(EOMONTH(CURRENT_TIMESTAMP,-1)),
+ EOMONTH(CURRENT_TIMESTAMP,-1))
+ AND EOMONTH(CURRENT_TIMESTAMP,-1 )
+
+GROUP BY Employer.ID, Job_post.id_employer
+) as m  JOIN Employer JOIN City Join states
+on states.ID = City.state_id
+on City.cities_id = Employer.city_id
+on Employer.ID = m.Employer_id
+
+ORDER BY [Number of announcements] DESC

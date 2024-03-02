@@ -1,0 +1,11 @@
+SELECT top(1) M.job_title as [Job Title] , 
+M.NumOfApplies as [Number Of Applies]
+From 
+(
+SELECT Job_title.job_title, COUNT(*) AS NumOfApplies
+FROM Application join Job_post Join Job_title 
+on job_title.ID = Job_post.jobtitle_id 
+on Job_post.ID = Application.id_jobpost 
+GROUP BY job_title
+) as M
+order by M.NumOfApplies DESC

@@ -1,0 +1,21 @@
+SELECT  Job_post.id_employer AS [Employer ID], Job_post.ID AS [Post ID],
+job_title.job_title, Job_post.[description],
+Job_category.job_category, job_type.job_type,
+Industry.[name] AS [Industry], min_salary,
+max_salary, City.[name] AS [City], states.[name] AS [State]
+,Job_post.experience_years
+
+FROM Job_post 
+JOIN Job_title ON job_title.ID = Job_post.jobtitle_id
+JOIN City ON City.cities_id = Job_post.city_id
+JOIN states ON states.ID = Job_post.state_id
+JOIN Job_category ON Job_category.ID = Job_post.job_category
+JOIN Job_type ON job_type.ID = Job_post.jobtype_id
+JOIN Industry ON Industry.id = Job_post.industry_id
+JOIN Employer ON Employer.ID = Job_post.id_employer
+WHERE Job_post.is_active = 1 
+AND created_at BETWEEN 
+DATEADD(day,1-DAY(EOMONTH(CURRENT_TIMESTAMP,-1)),
+EOMONTH(CURRENT_TIMESTAMP,-1))
+AND EOMONTH(CURRENT_TIMESTAMP,-1)
+ORDER BY Job_post.id_employer

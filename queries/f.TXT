@@ -1,0 +1,15 @@
+SELECT JobSeeker.ID ,JobSeeker.firstname,JobSeeker.lastname,
+JobSeeker.email,JobSeeker.[password],
+JobSeeker.about_me,JobSeeker.contact_no,
+JobSeeker.date_of_birth,JobSeeker.gender,
+states.[name] AS [State],City.[name] AS City,Career.[name] AS Career,
+Industry.[name] AS Industry, COUNT([Application].jobseeker_id) AS NumberOfApplies
+FROM [Application]
+Right JOIN JobSeeker ON [Application].jobseeker_id = JobSeeker.ID
+left Join City ON  JobSeeker.city_id = City.cities_id 
+left Join states ON  JobSeeker.state_id = states.ID
+left Join Career ON  JobSeeker.career_id = Career.ID
+left Join Industry ON  JobSeeker.industry_id = Industry.id
+GROUP BY JobSeeker.ID,JobSeeker.firstname,JobSeeker.lastname,JobSeeker.email,JobSeeker.[password],JobSeeker.about_me,JobSeeker.contact_no,JobSeeker.date_of_birth,
+JobSeeker.gender, City.[name], states.[name], Career.[name], Industry.[name]
+ORDER BY NumberOfApplies DESC;

@@ -1,0 +1,13 @@
+SELECT DISTINCT Job_title.job_title 
+FROM Job_title Join Job_post 
+on Job_title.ID <> ALL 
+(
+SELECT job_title.ID
+FROM Application join Job_post Join Job_title 
+on job_title.ID = Job_post.jobtitle_id 
+on Job_post.ID = Application.id_jobpost
+AND created_at Between
+DATEADD(day,1-DAY(EOMONTH(CURRENT_TIMESTAMP,-1)),
+EOMONTH(CURRENT_TIMESTAMP,-1)) AND
+EOMONTH(CURRENT_TIMESTAMP,-1)
+) 

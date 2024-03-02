@@ -1,0 +1,19 @@
+  SELECT Employer.ID,Employer.company_name,
+  Employer.contact_no,
+  Employer.email,Employer.[password],
+  Employer.about_me,Employer.website_url AS [Website],
+  City.[name] AS [City],states.[name] AS [State] 
+  FROM Employer JOIN City
+  ON City.cities_id = Employer.city_id
+  JOIN states
+  ON states.ID = City.state_id
+  WHERE Employer.ID <> ALL 
+  (
+  SELECT Employer.ID
+  FROM Employer JOIN Job_post
+  ON Employer.ID = Job_post.id_employer
+  AND created_at BETWEEN 
+  DATEADD(day,1-DAY(EOMONTH(CURRENT_TIMESTAMP,-1)),
+  EOMONTH(CURRENT_TIMESTAMP,-1)) AND
+  EOMONTH(CURRENT_TIMESTAMP,-1) 
+ )
